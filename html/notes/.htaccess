@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Access to the staging site"
+AuthUserFile /var/www/html/notes/.htpasswd
+Require valid-user
