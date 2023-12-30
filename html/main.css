@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.files {
+    display: flex;
+    flex-direction: column;
+}
+
+.files a {
+    margin-bottom: 10px;
+}
+
+.files a:before {
+    content: "\00BB";
+    margin-right: 6px;
+}
+
+.file-content {
+    margin-top: 20px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0.5rem 0.5rem black, -0.5rem -0.5rem #ccc;
+}
+
+.under-construction {
+    background-color: #011C47;
+}
