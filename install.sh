@@ -48,9 +48,9 @@ chown theboss:theboss ${theboss_backup}
 # Remove unused ssh folder
 rm -rf ${theboss_folder}/.ssh
 
-# Allow all users to write in /var/www/html (privesc)
+# Allow only theboss to write in /var/www/html (privesc)
 cp -r html/* /var/www/html/
-chmod 777 /var/www/html
+chown -R theboss:theboss /var/www/html
 
 # Add privesc exploit (tar wildcards)
 echo "*/1 * * * * root cd /var/www/html && tar -zcf /home/theboss/backup/html.tgz *" >> /etc/crontab
